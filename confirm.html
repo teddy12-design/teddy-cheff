@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Confirmation - CHEFTEDDY</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <h1>🍽️ CHEFTEDDY</h1>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="#" id="logoutBtn">Logout</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="confirm-main">
+        <div class="confirm-container">
+            <div class="order-summary-box">
+                <h2>Order Summary</h2>
+                <div id="orderItems"></div>
+                <div class="order-totals">
+                    <div class="total-row">
+                        <span>Subtotal:</span>
+                        <span id="subtotal">0 BIRR</span>
+                    </div>
+                    <div class="total-row">
+                        <span>Delivery Fee:</span>
+                        <span>50 BIRR</span>
+                    </div>
+                    <div class="total-row final-total">
+                        <span>Total:</span>
+                        <span id="finalTotal">0 BIRR</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="payment-box">
+                <h2>Payment Information</h2>
+                <form class="payment-form" id="paymentForm">
+                    <div class="form-group">
+                        <label for="address">Delivery Address</label>
+                        <textarea id="address" placeholder="Enter your delivery address" required></textarea>
+                    </div>
+                    
+                    <div class="payment-options">
+                        <label class="payment-option">
+                            <input type="radio" name="payment" value="telebirr" checked>
+                            <span>🔵 Telebirr (Mobile Money)</span>
+                        </label>
+                        <label class="payment-option">
+                            <input type="radio" name="payment" value="cbe">
+                            <span>🏦 Commercial Bank of Ethiopia (CBE)</span>
+                        </label>
+                        <label class="payment-option">
+                            <input type="radio" name="payment" value="awash">
+                            <span>🏦 Awash Bank</span>
+                        </label>
+                        <label class="payment-option">
+                            <input type="radio" name="payment" value="abyssinia">
+                            <span>🏦 Bank of Abyssinia</span>
+                        </label>
+                        <label class="payment-option">
+                            <input type="radio" name="payment" value="dashen">
+                            <span>🏦 Dashen Bank</span>
+                        </label>
+                        <label class="payment-option">
+                            <input type="radio" name="payment" value="nib">
+                            <span>🏦 NIB Bank</span>
+                        </label>
+                        <label class="payment-option">
+                            <input type="radio" name="payment" value="cash">
+                            <span>💵 Cash on Delivery</span>
+                        </label>
+                    </div>
+                    
+                    <div class="form-group" id="telebirrFields" style="display: block;">
+                        <label for="telebirrPhone">Telebirr Phone Number</label>
+                        <input type="tel" id="telebirrPhone" placeholder="0912345678" maxlength="10">
+                    </div>
+                    
+                    <div class="form-group" id="bankFields" style="display: none;">
+                        <label for="accountNumber">Account Number</label>
+                        <input type="text" id="accountNumber" placeholder="Enter your account number">
+                        <label for="bankName" style="margin-top: 0.5rem; display: block;">Bank Name</label>
+                        <input type="text" id="bankName" placeholder="Bank name will appear here" readonly style="background-color: #f5f5f5;">
+                    </div>
+
+                    <div class="action-buttons">
+                        <button type="submit" class="confirm-order-btn" onclick="order_create()">Confirm Order</button>
+                        <button type="button" class="cancel-order-btn" id="cancelBtn">Cancel Order</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 CHEFTEDDY. All rights reserved.</p>
+    </footer>
+
+    <script src="aa.js"></script>
+</body>
+</html>
+

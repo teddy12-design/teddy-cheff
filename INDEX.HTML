@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHEFTEDDY - Ethiopian Food Delivery</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <h1>🍽️ CHEFTEDDY</h1>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                  <a href="login.html">Login</a>
+                <a href="#" id="logoutBtn">Logout</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <div class="welcome-section">
+                <h2>Welcome to CHEFTEDDY</h2>
+                <p>Authentic Ethiopian Cuisine Delivered to Your Door</p>
+            </div>
+
+            <div class="menu-section">
+                <h2>Our Menu</h2>
+                <div class="menu-grid">
+                    <div class="food-item">
+                        
+                        <img src="doro wat.jpg" alt="Doro Wat" onerror="this.src='old-image.svg'">
+                        <h3>Doro Wat (ዶሮ ወጥ)</h3>
+                        <p>Spicy chicken stew with boiled eggs, served with injera</p>
+                        <p class="price">350 BIRR</p>
+                        <button class="add-to-cart" data-name="Doro Wat" data-price="350">Add to Cart</button>
+                    </div>
+
+                    <div class="food-item">
+                        
+                        <img src="tibs.jpg" alt="Tibs" onerror="this.src='old-image.svg'">
+                        <h3>Tibs (ጥብስ)</h3>
+                        <p>Grilled beef or lamb with vegetables and spices</p>
+                        <p class="price">280 BIRR</p>
+                        <button class="add-to-cart" data-name="Tibs" data-price="280">Add to Cart</button>
+                    </div>
+
+                    <div class="food-item">
+                       
+                        <img src="kitfo.jpg" alt="Kitfo" onerror="this.src='old-image.svg'">
+                        <h3>Kitfo (ክትፎ)</h3>
+                        <p>Raw minced beef with mitmita and niter kibbeh</p>
+                        <p class="price">320 BIRR</p>
+                        <button class="add-to-cart" data-name="Kitfo" data-price="320">Add to Cart</button>
+                    </div>
+
+                    <div class="food-item">
+
+                        <img src="shiro.jpg" alt="Shiro" onerror="this.src='old-image.svg'">
+                        <h3>Shiro (ሽሮ)</h3>
+                        <p>Chickpea stew with berbere, onions, and garlic</p>
+                        <p class="price">180 BIRR</p>
+                        <button class="add-to-cart" data-name="Shiro" data-price="180">Add to Cart</button>
+                    </div>
+
+                    <div class="food-item">
+                        <img src="Beyaynetu.jpg" alt="Beyaynetu" onerror="this.src='old-image.svg'">
+                        <h3>Beyaynetu (በያይነቱ)</h3>
+                        <p>Vegetarian platter with lentils, vegetables, and salads</p>
+                        <p class="price">220 BIRR</p>
+                        <button class="add-to-cart" data-name="Beyaynetu" data-price="220">Add to Cart</button>
+                    </div>
+
+                    <div class="food-item">
+                        <img src="injera.jpg" alt="Injera" onerror="this.src='old-image.svg'">
+                        <h3>Injera (እንጀራ) - 3 pieces</h3>
+                        <p>Traditional Ethiopian sourdough flatbread</p>
+                        <p class="price">45 BIRR</p>
+                        <button class="add-to-cart" data-name="Injera (3 pieces)" data-price="45">Add to Cart</button>
+                    </div>
+
+                    <div class="food-item">
+                        <img src="misir wat.jpg" alt="Misir Wat" onerror="this.src='old-image.svg'">
+                        <h3>Misir Wat (ምስር ወጥ)</h3>
+                        <p>Spicy red lentil stew with berbere spice</p>
+                        <p class="price">160 BIRR</p>
+                        <button class="add-to-cart" data-name="Misir Wat" data-price="160">Add to Cart</button>
+                    </div>
+
+                    <div class="food-item">
+                        
+                        <img src="gomen.jpg" alt="Gomen" onerror="this.src='old-image.svg'">
+                        <h3>Gomen (ጎመን)</h3>
+                        <p>Collard greens cooked with garlic and spices</p>
+                        <p class="price">140 BIRR</p>
+                        <button class="add-to-cart" data-name="Gomen" data-price="140">Add to Cart</button>
+                    </div>
+                    
+                    <div class="food-item">
+                        <img src="ful.jpg" alt="Ful" onerror="this.src='old-image.svg'">
+                        <h3>Ful (ፉል)</h3>
+                        <p>Fava bean stew with vegetables and spices</p>
+                        <p class="price">150 BIRR</p>
+                        <button class="add-to-cart" data-name="Ful" data-price="150">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cart Sidebar -->
+        <div class="cart-sidebar" id="cartSidebar">
+            <div class="cart-header">
+                <h3>Your Cart</h3>
+                <button class="close-cart" id="closeCart">×</button>
+            </div>
+            <div class="cart-items" id="cartItems">
+                <p class="empty-cart">Your cart is empty</p>
+            </div>
+            <div class="cart-footer">
+                <div class="cart-total">
+                    <strong>Total: <span id="cartTotal">0 BIRR</span></strong>
+                </div>
+                <button class="checkout-btn" id="checkoutBtn">Proceed to Checkout</button>
+            </div>
+        </div>
+
+        <!-- Cart Icon -->
+        <div class="cart-icon" id="cartIcon">
+            <span>🛒</span>
+            <span class="cart-count" id="cartCount">0</span>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 CHEFTEDDY. All rights reserved.</p>
+    </footer>
+
+
+    <script src="aa.js"></script>
+</body>
+</html>
